@@ -4,7 +4,11 @@ Rolling statistics calculator.
 
 Implementing GNU Scientific Library "Running Statistics" in GO. https://www.gnu.org/software/gsl/doc/html/rstat.html
 
-Process one number per line. Running statistics are estimates with results converging to truth as number of elements increases. See GNU reference for more information.
+Requires GO language, and them go build ( or go install)in nebulostat directory. 
+
+** Processes one number per line. **
+
+Running statistics are estimates with results converging to truth as number of elements increases. See GNU reference for more information.
 
 Usage: Pipe numbers into program (Linux only)
 
