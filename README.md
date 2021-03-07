@@ -18,16 +18,16 @@ or use with a file argument (Linux or Windows)
 
 Ouptut:
 
-The sample Mean
-Std Dev
-The estimated variance
-Largest Value
-Smallest Value
-Estimated Median
-Standard Deviation of the mean.
-Skew
-Kurtosis
-Estimated lower quantile
-Estimated middle quantile (Median)
-Estimated upper quantile
-Number of items
+* The sample Mean
+* Std Dev
+* The estimated variance
+* Largest Value
+* Smallest Value
+* Estimated Median
+* Standard Deviation of the mean.
+* Skew
+* Kurtosis
+* Estimated lower quantile
+* Estimated middle quantile (Median)
+* Estimated upper quantile
+* Number of items
