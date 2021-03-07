@@ -1,0 +1,23 @@
+Windows detected. Note: Window pipes not implemented, file argument ok.
+data2.dat : argument (file) input
+Welcome! NOTE: testing watchdog will stop after coded no of lines.
+ .... 
+Starting time is 2021-03-08 09:46:09.848174 +1030 ACDT m=+0.001999201
+ouput ...
+end of input: Elements processed:  41
+
+Overall results:
+79.00, The sample Mean
+58.05, Std Dev
+3370.15, The estimated variance
+190.00, Largest Value
+1.00, Smallest Value
+66.64, Estimated Median
+9.18, Standard Deviation of the mean.
+0.28, Skew
+-1.17, Kurtosis
+21.71, Estimated lower quantile
+66.64, Estimated middle quantile (Median)
+125.52, Estimated upper quantile
+40, Number of items
+Ending time is 2021-03-08 09:46:09.8491741 +1030 ACDT m=+0.002999301
