@@ -7,10 +7,14 @@ Implementing GNU Scientific Library "Running Statistics" in GO. https://www.gnu.
 Process one number per line. Running statistics are estimates with results converging to truth as number of elements increases. See GNU reference for more information.
 
 Usage: Pipe numbers into program (Linux only)
-    awk '{ print $3 }' datafile.dat | nebulostat
 
-    or use with a file argument (Linux or Windows)
-    nebulostat datafile.dat
+```
+  awk '{ print $3 }' datafile.dat | nebulostat
+```
+or use with a file argument (Linux or Windows)
+```
+  nebulostat datafile.dat
+```
 
 Ouptut:
 
