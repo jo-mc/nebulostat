@@ -1,10 +1,10 @@
 # nebulostat
 
-Rolling statistics calculator.
+Rolling statistics calculator. 
 
 Implementing GNU Scientific Library "Running Statistics" in GO. https://www.gnu.org/software/gsl/doc/html/rstat.html
 
-Requires GO language, and them go build ( or go install)in nebulostat directory. 
+Requires GO language, and then *go build* (or *go install*) in nebulostat directory. 
 
 ** Processes one number per line. **
 
