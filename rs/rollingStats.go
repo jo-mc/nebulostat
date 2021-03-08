@@ -1,5 +1,10 @@
 package rs
 
+
+// Copyright ©2020 J McConnell	. All rights reserved.
+// Use of this source code is governed by a BSD-style
+// license that can be found in the LICENSE.txt file.
+
 // from: https://www.gnu.org/software/gsl/doc/html/rstat.html
 
 import "sort"
