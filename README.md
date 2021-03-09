@@ -5,6 +5,7 @@ Rolling statistics calculator.
 Implementing GNU Scientific Library "Running Statistics" in GO. https://www.gnu.org/software/gsl/doc/html/rstat.html
 
 Requires GO language, and then *go build* (or *go install*) in nebulostat directory. 
+Alternately awk version is available for linux command line usage. (no quantile output as yet)
 
 ** Processes one number per line. **
 
@@ -18,6 +19,10 @@ Usage: Pipe numbers into program (Linux only)
 or use with a file argument (Linux or Windows)
 ```
   nebulostat datafile.dat
+```
+or awk version
+```
+  awk -f nebulostat.awk datafile.dat,   or pipe in awk '{ print $3 }' datafile.dat | awk -f nebulostat.awk
 ```
 
 Ouptut:
