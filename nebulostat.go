@@ -123,6 +123,8 @@ func pipeorfileOK() {
 
 	var info os.FileInfo
 	var err error
+	var inPipe bool = false
+	var inFile bool = false
 
 	if runtime.GOOS == "windows" {
 		fmt.Println("Windows detected. Note: Window pipes not implemented, file argument ok.")
@@ -136,6 +138,7 @@ func pipeorfileOK() {
 		if info.Mode()&os.ModeNamedPipe != 0 { // is data begin piped in?
 			// we have a pipe input
 			fmt.Println("we have a pipe input")
+			inPipe = true
 		}
 	}
 
@@ -150,13 +153,29 @@ func pipeorfileOK() {
 			os.Exit(1)
 		}
 		file.Close()
+		inFile = true
 	}
 
 	if runtime.GOOS != "windows" {
 		// Both pipe and argument? -> EXIT
-		if info.Mode()&os.ModeNamedPipe != 0 && len(os.Args) > 1 {
+		if inPipe && inFile {
 			fmt.Println("we have a pipe input and a file input ?? exiting")
 			os.Exit(1)
 		}
+	}
+
+	if (inPipe || inFile) == false {
+		// no input
+		fmt.Println("No input detected ?? exiting")
+		fmt.Println("Usage: Pipe numbers into program (Linux only)")
+		fmt.Println("awk '{ print $3 }' datafile.dat | nebulostat")
+		fmt.Println("or use with a file argument (Linux or Windows)")
+		fmt.Println("nebulostat datafile.dat")
+		fmt.Println("or awk version")
+		fmt.Println("awk -f nebulostat.awk datafile.dat,   ")
+		fmt.Println("or pipe in:")
+		fmt.Println("awk '{ print $3 }' datafile.dat | awk -f nebulostat.awk")
+		fmt.Println("File input must consist of one number per line.")
+		os.Exit(1)
 	}
 }
